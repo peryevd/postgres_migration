@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-exercise-count
+      author: Dima
+      changes:
+        - createTable:
+            tableName: ExerciseCount
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: count
+                  type: integer
+                  constraints:
+                    nullable: false
+              - column:
+                  name: count_destination
+                  type: integer
+                  constraints:
+                    nullable: false

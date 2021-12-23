@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-exrcise-type
+      author: Dima
+      changes:
+        - createTable:
+            tableName: ExerciseType
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: exercise_type_table
+                  type: bigint
+                  constraints:
+                    nullable: false

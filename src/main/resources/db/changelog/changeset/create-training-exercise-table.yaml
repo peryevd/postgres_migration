@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-training-exercise
+      author: Dima
+      changes:
+        - createTable:
+            tableName: TrainingExercise
+            columns:
+              - column:
+                  name: training_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: exercise_id
+                  type: bigint
+                  constraints:
+                    nullable: false

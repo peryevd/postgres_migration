@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id:  add_foreign_key_exercise
+      author: Dima
+      changes:
+        -  addForeignKeyConstraint:
+             baseColumnNames:  exercise_type_id
+             baseTableName:  Exercise
+             constraintName: exercise_type_id
+             deferrable:  true
+             initiallyDeferred:  true
+             onDelete:  CASCADE
+             onUpdate:  RESTRICT
+             referencedColumnNames:  id
+             referencedTableName:  ExerciseType
+             validate:  true

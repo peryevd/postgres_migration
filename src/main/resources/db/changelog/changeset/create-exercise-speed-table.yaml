@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-exercise-speed
+      author: Dima
+      changes:
+        - createTable:
+            tableName: ExerciseSpeed
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: time
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: distance
+                  type: integer
+                  constraints:
+                    nullable: false
+              - column:
+                  name: time_destination
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: distance_destination
+                  type: integer
+                  constraints:
+                    nullable: false

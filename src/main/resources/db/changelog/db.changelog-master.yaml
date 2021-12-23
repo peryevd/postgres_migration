@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset/create-user-table.yaml
+  - include:
+      file: db/changelog/changeset/create-training-table.yaml
+  - include:
+      file: db/changelog/changeset/create-training-exercise-table.yaml
+  - include:
+      file: db/changelog/changeset/create-exercise-table.yaml
+  - include:
+      file: db/changelog/changeset/create-competition-table.yaml
+  - include:
+      file: db/changelog/changeset/create-exercise-type-table.yaml
+  - include:
+      file: db/changelog/changeset/create-exercise-time-table.yaml
+  - include:
+      file: db/changelog/changeset/create-exercise-count-table.yaml
+  - include:
+      file: db/changelog/changeset/create-exercise-speed-table.yaml
+  - include:
+      file: db/changelog/changeset/add-fk-training.yaml
+  - include:
+      file: db/changelog/changeset/add-fk-training-exercise.yaml
+  - include:
+      file: db/changelog/changeset/add-fk-exercise.yaml
