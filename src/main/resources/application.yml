@@ -6,9 +6,12 @@ spring:
     jdbc-url: ${spring:datasource:url}
     driver-class-name: org.postgresql.Driver
     username: postgres
-    password: postgres
+    password: 12345678
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
     hibernate:
-      ddl-auto: none
+      ddl-auto: validate
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
     properties.hibernate.temp.use_jdbc_metadata_defaults: false
